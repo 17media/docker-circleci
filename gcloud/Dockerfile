@@ -13,7 +13,7 @@ RUN         apk --no-cache add --virtual .rundeps \
 RUN         apk --no-cache add --virtual .gcloud-builddeps \
                 tar && \
             apk --no-cache add --virtual .gcloud-rundeps \
-                python2 && \
+                python2 python3 && \
             mkdir -p /usr/src/google-cloud-sdk && \
             curl -sSL https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz | tar xz -C /usr/src/google-cloud-sdk --strip-components 1 && \
             ( \
