@@ -7,7 +7,9 @@ RUN         apk --no-cache add --virtual .rundeps \
                 docker \
                 parallel \
                 curl \
-                ca-certificates
+                ca-certificates \
+                tar \ 
+                gzip
 
             # Add gcloud
 RUN         apk --no-cache add --virtual .gcloud-builddeps \
