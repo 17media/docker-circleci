@@ -4,12 +4,13 @@ RUN         apk --no-cache add --virtual .rundeps \
                 build-base \
                 git \
                 openssh-client \
-                docker \
                 parallel \
                 curl \
                 ca-certificates \
                 tar \ 
-                gzip
+                gzip && \
+            apk --no-cache add -X http://dl-cdn.alpinelinux.org/alpine/edge/community --virtual .rundeps \
+                docker
 
             # Add gcloud
 RUN         apk --no-cache add --virtual .gcloud-builddeps \
