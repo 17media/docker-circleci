@@ -9,7 +9,8 @@ RUN         apk --no-cache add --virtual .rundeps \
                 ca-certificates \
                 tar \ 
                 gzip \
-                coreutils && \
+                coreutils \
+                jq && \
             apk --no-cache add -X http://dl-cdn.alpinelinux.org/alpine/edge/community --virtual .rundeps \
                 docker
 
