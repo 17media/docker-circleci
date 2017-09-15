@@ -15,6 +15,8 @@ RUN         apk --no-cache add --virtual .run-deps \
                 coreutils \
                 jq \
                 docker && \
+            apk --no-cache add -X http://dl-cdn.alpinelinux.org/alpine/v3.4/community --virtual .run-deps \
+                hub && \
 
             # Add gcloud
             apk --no-cache add --virtual .build-deps \
